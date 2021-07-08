@@ -1,0 +1,39 @@
+#title {
+  text-align: center;
+  font-family: inherit;
+}
+
+#color-palette {
+  width: 350px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 3px;
+  justify-content: space-evenly;
+}
+
+.color {
+  min-width: 50px;
+  min-height: 50px;
+  border: 1px solid black;
+  border-radius: 1px;
+  border-radius: 50%;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
