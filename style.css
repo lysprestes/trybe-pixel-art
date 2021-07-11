@@ -30,7 +30,7 @@ body {
 #black {
   background-color: black;
 }
-
+/*
 #red {
   background-color: red;
 }
@@ -42,6 +42,7 @@ body {
 #blue {
   background-color: blue;
 }
+*/
 
 #pixel-board {
   width: fit-content;

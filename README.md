@@ -352,7 +352,7 @@ Neste projeto, você implementará um editor de arte com pixels.
 
 - Verifica se 40 pixels é o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
 
-### 6 - Defina a cor preta como cor inicial. Ao carregar a página, a cor preta já deve estar selecionada para pintar os pixels
+### 6 - **Defina a cor preta como cor inicial. Ao carregar a página, a cor preta já deve estar selecionada para pintar os pixels**
 
 - O elemento da cor preta deve possuir, inicialmente, a `classe` `selected`;
 
