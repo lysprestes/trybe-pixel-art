@@ -25,7 +25,7 @@ color.forEach(item => {
 
 //Adiciona uma cor por vez e pinta os quadradinhos atribuindo o mesmo ID para os pixels.
 function paint() {
-const pixel = document.querySelectorAll('.pixel');
+  const pixel = document.querySelectorAll('.pixel');
   pixel.forEach(item => {
     item.addEventListener('click', event => {
       event.target.style.backgroundColor = selectedColor.style.backgroundColor;
@@ -53,9 +53,10 @@ function hexColor() {
 
 function createTable(inputBoard) {
   generateBoard.innerHTML = null;
-  for (let i = 0; i < inputBoard; i += 1) {
+  const tableSize = conditon(inputBoard);
+  for (let i = 0; i < tableSize; i += 1) {
     let tr = document.createElement('tr');
-    for (let j = 0; j < inputBoard; j += 1) {
+    for (let j = 0; j < tableSize; j += 1) {
       let td = document.createElement('td');
       td.classList.add('pixel');
       tr.appendChild(td);
@@ -65,17 +66,21 @@ function createTable(inputBoard) {
 };
 
 buttonBoard.addEventListener('click', () => {
-  let inputValeu = document.getElementById('board-size').value;
-  createTable(inputValeu);
+  let inputValue = document.getElementById('board-size').value;
+  createTable(inputValue);
   paint();
 });
 
-// function conditon() {
-//   const inputValeu = document.querySelector('#board-size');
-//   if (inputValeu.value < 5) {
-//     inputValeu.value = 5;
-//   }
-//   if (inputValeu.value > 50) {
-//     inputValeu.value = 50;
-//   }
-// }
+function conditon(minMax) {
+  if (minMax == "") {
+    alert("Board inválido!");
+  } else {
+    if (minMax < 5) {
+      return 5;
+    }
+    if (minMax > 50) {
+      return 50;
+    }
+    return (minMax);
+  }
+};
